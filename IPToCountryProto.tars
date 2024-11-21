@@ -1,0 +1,41 @@
+/**
+*   IP库服务协议，
+*/
+module iptocountry
+{
+    //IP信息
+    struct IPInfo
+    {
+        0 optional long ipBegin;  //起始IP
+        1 optional long ipEnd;    //终止IP
+        2 optional string areaCode; //区域代码
+    };
+
+    //区域代码
+    enum E_Area_ID
+    {
+        E_AREA_ID_UNKNOWN = 0,  //未知
+        E_AREA_ID_HK = 1001, //香港
+        E_AREA_ID_MO = 1002, //澳门
+        E_AREA_ID_TW = 1003, //台湾
+        E_AREA_ID_TH = 1004, //泰国
+        E_AREA_ID_SG = 1005, //新加坡
+        E_AREA_ID_MY = 1006, //马来西亚
+        E_AREA_ID_ID = 1007, //印度尼西亚
+        E_AREA_ID_VN = 1008, //越南
+    };
+
+    //取区域ID请求
+    struct AreaIDReq
+    {
+        0 optional string ip;  //IP地址
+    };
+
+    //取区域ID应答
+    struct AreadIDResp
+    {
+        0 optional int areaID;   //区域代码
+    };
+}; 
+
+

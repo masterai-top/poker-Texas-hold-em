@@ -1,0 +1,20 @@
+/**
+*脏词过滤服务协议，
+**/
+module wordfilter
+{
+    //过滤请求
+    struct WordFilterReq
+    {
+        0 optional string words;      //过滤词语
+    };
+
+    //过滤应答
+    struct WordFilterResp
+    {
+        0 optional int resultCode;	//结果码
+        1 optional string dstWords;  //过滤后字符串
+    };
+}; 
+
+

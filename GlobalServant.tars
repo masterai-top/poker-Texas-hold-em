@@ -1,0 +1,47 @@
+#include "NicknameProto.tars"
+#include "WordFilterProto.tars"
+#include "RankProto.tars"
+#include "IPToCountryProto.tars"
+#include "/home/tarsproto/XGame/Comm/JFGame.tars"
+
+/***
+* 公共服务接口
+*/
+module global
+{
+    interface GlobalServant
+    {
+        // HTTP请求处理接口
+        int doRequest(vector<byte> reqBuf, map<string, string> extraInfo, out vector<byte> rspBuf);
+
+        // TCP请求处理接口
+        int onRequest(long lUin, string sMsgPack, string sCurServrantAddr, JFGame::TClientParam stClientParam, JFGame::UserBaseInfoExt stUserBaseInfo);
+
+        // 获取随机昵称
+        //int ListNickNameRandom(nickname::ListNickNameRandomReq req, out nickname::ListNickNameRandomResp resp);
+
+        // 变更昵称状态
+        //int UpdateNickNameStatus(nickname::UpdateNickNameStatusReq req, out nickname::UpdateNickNameStatusResp resp);
+
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////
+        
+        // 过滤文本
+        int filterWords(wordfilter::WordFilterReq req, out wordfilter::WordFilterResp resp);
+
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        //更新榜单
+        int updateRankBoard(XGame::UpdateRankBoardReq req, out XGame::UpdateRankBoardResp resp);
+
+        //查询榜单
+        int queryRankInfo(XGame::QueryRankInfoReq req, out XGame::QueryRankInfoResp resp);
+
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        //取区域ID
+        int getAreaID(iptocountry::AreaIDReq req, out iptocountry::AreadIDResp rsp);
+
+        // 刷新赛季排行榜数据
+        int RefreshSeasonRankInfo();
+    };
+}; 

@@ -1,0 +1,33 @@
+/**
+* 昵称服务协议
+*/
+module nickname
+{
+    // 获取随机昵称请求
+    struct ListNickNameRandomReq
+    {
+        0 optional int count;   //数量
+    };
+
+    // 获取随机昵称应答
+    struct ListNickNameRandomResp
+    {
+        0 optional int resultCode;              //结果码
+        1 optional vector<string> nickname;     //随机昵称
+    };
+
+    // 变更昵称状态请求
+    struct UpdateNickNameStatusReq
+    {
+        0 optional string nickname;     //昵称
+        1 optional int status;          //状态， 0--未使用，1--已使用
+    };
+
+    // 变更昵称状态应答
+    struct UpdateNickNameStatusResp
+    {
+        0 optional int resultCode;  //结果码
+    };
+}; 
+
+

@@ -1,0 +1,43 @@
+/**
+* 排名系统协议文件
+* 
+**/
+module XGame
+{
+    struct UpdateRankBoardReq
+    {
+        0 require long uid;
+        1 require long gold;
+        2 require long level;
+        3 require long type;
+    };
+
+    struct UpdateRankBoardResp
+    {
+        0 require int resultCode;
+    };
+
+    struct QueryRankInfoReq
+    {
+        0 require int type;
+        1 require int areaId;
+        2 require int seasonType;
+    };
+
+    struct RankItem
+    {
+        0 require long uid;
+        1 require long gold;
+        2 require long level;
+        3 require long starNum;
+        4 require long danGrade;
+    };
+
+    struct QueryRankInfoResp
+    {
+        0 require int resultCode;
+        1 require int rankingType;
+        2 require vector<RankItem> list;
+    };
+}; 
+
