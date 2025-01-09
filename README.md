@@ -1,4 +1,4 @@
-德州jinb金币大厅源码，德州竞技者联盟模式代码，里面多个德州游戏，AOF，短牌，竞技场，私人局私人场，比赛场；线上成熟产品，可以上架ios和googlePlay；联系Telegram：@xuzongbin001或E-mail：taibaibaba1314@gmail.com
+德州金币大厅源码，德州竞技者联盟模式代码，里面多个德州游戏，AOF，短牌，竞技场，私人局私人场，比赛场；线上成熟产品，可以上架ios和googlePlay；联系Telegram：@xuzongbin001或E-mail：taibaibaba1314@gmail.com
 ![私人房2 (2)](https://github.com/user-attachments/assets/0953c0dc-f7d1-4d80-a758-1ce4640ccb08)
 ![商场3](https://github.com/user-attachments/assets/8e741710-386a-49cc-b135-b22f25019cfc)
 ![牌桌-胜利提示](https://github.com/user-attachments/assets/85fa8276-73bd-4d6c-8c9d-5f95e301d320)
